@@ -1,0 +1,53 @@
+.listImage {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.listImage .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.listImage .image {
+  position: relative;
+}
+
+.listImage .image .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.listImage .image .icon {
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.listImage .image:hover img {
+  opacity: 0.5;
+}
+
+.listImage .image:hover .overlay {
+  opacity: 1;
+}
+
+.listImage img {
+  margin-top: 4px;
+  width: 100%;
+}
